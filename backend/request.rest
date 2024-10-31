@@ -1,0 +1,113 @@
+### is used for space for new request
+
+
+// all user data
+// create  a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+
+{
+  "id":2,
+  "name":"usman",
+  "email":"usman@gmail.com",
+  "password":"usman1234",
+  "confPassword":"usman1234",
+  "role":"user"
+}
+
+###
+// get all user 
+GET http://localhost:5000/users
+
+###
+// get single user 
+
+GET http://localhost:5000/users
+
+###
+//update user
+
+PATCH  http://localhost:5000/users/856d1964-cf63-4a6e-aa85-faa455c98fb4
+Content-Type: application/json
+
+{
+  "name":"Saad",
+  "email":"saad@gmail.com",
+  "password":"saad1234",
+  "confPassword":"saad1234",
+  "role":"admin"
+}
+
+###
+// delete user
+DELETE http://localhost:5000/user
+
+
+
+// login user data
+
+###
+// admin login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+ {
+    "email":"saadanisqureshi@gmail.com",
+    "password":"saad1234"
+ }
+
+###
+// user Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+ {
+     "email":"asfaq@gmail.com",
+      "password":"asfaq1234"
+ }
+
+###   
+// get user after login
+GET http://localhost:5000/me
+
+### 
+// delete user session and logout user
+DELETE http://localhost:5000/logout
+
+
+
+
+// Products
+###
+// get all Products
+GET http://localhost:5000/products
+
+###
+//get single Product
+GET http://localhost:5000/product/c6e8d85e-4856-4e34-be94-4fed144c2184
+
+###
+// Post Products
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+   "name":"admin product",
+   "price":"150 rupiya dega"
+}
+
+###
+// Update Products
+PATCH  http://localhost:5000/products/c33f3e9b-1ae9-4c4b-9ae0-2f65f1da9179
+Content-Type: application/json
+
+{
+   "name":"admin product",
+   "price":"200 rupiya dega"
+}
+
+
+###
+// delete Products
+DELETE http://localhost:5000/products/c6e8d85e-4856-4e34-be94-4fed144c2184
